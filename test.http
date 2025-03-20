@@ -1,0 +1,10 @@
+POST http://localhost:3333/dags
+Content-Type: application/json
+
+{
+    "dagId": "batatinha3",
+    "dagPath": "/opt/dag_batatinh3"
+}
+
+###
+GET http://localhost:3333/dags

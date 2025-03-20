@@ -1,0 +1,4 @@
+run:
+	air
+
+all: run

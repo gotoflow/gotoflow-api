@@ -1,0 +1,27 @@
+services:
+  psql:
+    image: postgres:12
+    container_name: psql
+    ports:
+      - "5430:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    networks:
+      - gotoflow
+  
+  # go_api:
+  #   build: .
+  #   ports:
+  #     - "3333:3333"
+  #   depends_on:
+  #     - psql
+  #   networks:
+  #     - gotoflow
+
+networks:
+  gotoflow:
+    driver: bridge
